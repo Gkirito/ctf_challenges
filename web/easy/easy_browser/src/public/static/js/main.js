@@ -1,0 +1,1 @@
+console.log('请使用CTF Security Browser')
