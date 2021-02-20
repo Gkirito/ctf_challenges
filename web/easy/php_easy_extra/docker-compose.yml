@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  easy_extra:
+    build: .
+    image: gkirito/easy_extra
+    container_name: easy_extra
+    restart: always
+    environment:
+      - FLAG=flag{8b68f1c6-e4c2-435d-90cf-23667bb79dc0}
+
+  web:
+    image: nginx:latest
+    restart: always
+    ports:
+      - "8083:80"
+    volumes:
+      - ./config/:/etc/nginx/conf.d
+      - ./src/:/usr/nginx/html
+    depends_on:
+      - easy_extra
+    links:
+      - easy_extra:php
