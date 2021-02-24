@@ -8,17 +8,5 @@ services:
     restart: always
     environment:
       - FLAG=flag{8b68f1c6-e4c2-435d-90cf-23667bb79dc0}
-
-  web:
-    image: nginx:latest
-    container_name: web
-    restart: always
     ports:
-      - "8083:80"
-    volumes:
-      - ./config/:/etc/nginx/conf.d
-      - ./src/:/usr/nginx/html
-    depends_on:
-      - easy_router
-    links:
-      - easy_router:php
+      - 8080:80

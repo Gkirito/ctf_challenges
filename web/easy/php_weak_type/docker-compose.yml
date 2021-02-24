@@ -1,10 +1,10 @@
 version: "3"
 
 services:
-  easy_extra:
+  weak_type:
     build: .
-    image: gkirito/php_easy_extra
-    container_name: easy_extra
+    image: gkirito/php_weak_type
+    container_name: weak_type
     restart: always
     environment:
       - FLAG=flag{8b68f1c6-e4c2-435d-90cf-23667bb79dc0}
