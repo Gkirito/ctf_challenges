@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  session_variable:
+    build: .
+    image: gkirito/php_session_variable
+    container_name: session_variable
+    restart: always
+    environment:
+      - FLAG=flag{8b68f1c6-e4c2-435d-90cf-23667bb79dc0}
+    ports:
+      - 8080:80

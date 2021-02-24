@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  php_array:
+    build: .
+    image: gkirito/php_array
+    container_name: php_array
+    restart: always
+    environment:
+      - FLAG=flag{8b68f1c6-e4c2-435d-90cf-23667bb79dc0}
+    ports:
+      - 8080:80
