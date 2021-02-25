@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  easy_exec:
+    build: .
+    image: gkirito/php_easy_exec
+    container_name: easy_exec
+    restart: always
+    environment:
+      - FLAG=flag{8b68f1c6-e4c2-435d-90cf-23667bb79dc0}
+    ports:
+      - 8080:80
